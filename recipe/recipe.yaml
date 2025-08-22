@@ -28,7 +28,8 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - bioio-base ==3.0.0
+    # bioio-base version must always match bioio version
+    - bioio-base ==${{ version }}
     - dask-core >=2021.4.1
     - fsspec >=2022.8.0
     - imageio >=2.11.0
