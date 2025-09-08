@@ -14,7 +14,7 @@ source:
   sha256: 8be25df70b611e62d1f1c3b11b47e039f3626e08e17e0dc792d824be3e4aeb89
 
 build:
-  number: 1
+  number: 3
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -30,16 +30,9 @@ requirements:
     - python >=${{ python_min }}
     - bioio-base ==3.0.0
     - dask-core >=2021.4.1
-    - fsspec >=2022.8.0
-    - imageio >=2.11.0
-    - numpy >=1.21.0
+    - numpy >=1.24
     - ome-types >=0.4.0
-    - ome-zarr >=0.6.1
-    - ome-zarr-models >=0.1.1
-    - scikit-image !=0.23.0
     - semver >=3.0.1
-    - tifffile >=2021.8.30
-    - zarr >=2.6.0
 
 tests:
   - python:
