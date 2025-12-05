@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: bioio
-  version: "3.0.0"
+  version: 3.1.0
   python_min: '3.11'
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/bioio-${{ version }}.tar.gz
-  sha256: 8be25df70b611e62d1f1c3b11b47e039f3626e08e17e0dc792d824be3e4aeb89
+  sha256: d5be5fc55cef0cdea2351e14de984735d9c418609faa8436a9079015de509c72
 
 build:
-  number: 3
+  number: 0
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -28,12 +28,11 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - bioio-base ==3.0.0
+    - bioio-base >=3.1.0,<3.2.dev0
     - dask-core >=2021.4.1
-    - numpy >=1.24
+    - numpy >=1.21.0
     - ome-types >=0.4.0
     - semver >=3.0.1
-
 tests:
   - python:
       imports:
