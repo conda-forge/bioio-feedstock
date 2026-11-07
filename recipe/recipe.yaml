@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: bioio
-  version: "3.6.0"
+  version: 3.7.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/bioio-${{ version }}.tar.gz
-  sha256: e6fcc0d2f816f293756446349ccb293d35c11860f6f2bff265108cff300828f0
+  sha256: 5879b0fc16a4aea3a10428f8954da9458f7d4489fda9e56ae287d028b015e1ac
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - bioio-base >=3.5.0,<3.6.dev0
+    - bioio-base >=3.6.0,<3.7.dev0
     - dask-core >=2021.4.1
     - numpy >=1.21.0
     - ome-types >=0.4.0
@@ -39,7 +39,7 @@ tests:
       pip_check: false
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   summary: Image reading, metadata management, and image writing for Microscopy images in Python
