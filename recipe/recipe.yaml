@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: bioio
-  version: 3.7.0
+  version: 3.7.1
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/bioio-${{ version }}.tar.gz
-  sha256: 5879b0fc16a4aea3a10428f8954da9458f7d4489fda9e56ae287d028b015e1ac
+  sha256: a722df38afaee4befe755bdc6b994acaa141a806dbd9dd32909787e5c75e6c37
 
 build:
   number: 0
@@ -32,6 +32,7 @@ requirements:
     - numpy >=1.21.0
     - ome-types >=0.4.0
     - semver >=3.0.1
+    - fsspec >=2022.8.0
 tests:
   - python:
       imports:
